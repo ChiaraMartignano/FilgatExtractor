@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +13,7 @@
     "fs": "0.0.1-security",
     "line-by-line": "^0.1.6",
     "node-stream-zip": "^1.7.0",
+    "xml-entities": "0.0.1",
     "xml2js": "^0.4.19"
   }
 }

@@ -44,7 +44,7 @@ module.exports = {
 
                     for(var i=0;i<components.length;i++) {
                         var tags = components[i].split('>')
-                        var content = tags[1].replace(/<.*$/,"")
+                        var content = tags[1].replace(/<.*$/,"\n ")
                         body += content+' '
                     }
 
