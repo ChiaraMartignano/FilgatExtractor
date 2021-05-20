@@ -1,18 +1,11 @@
-var docx = require('./docx')
+var txt = require('./txt')
 var fs = require('fs');
 var xmlEntities = require("xml-entities");
 
 var extractDoc = function(file) {
-    docx.extract('./input/' + file.name).then(function(res, err) {
+    txt.extract('./input/' + file.name).then(function(texts, err) {
         if (err) {
             console.log(err)
-        }
-        var textStartPos = res.length, textEndPos = res.length, i = 0, texts = [];
-        while (i > -1) {
-            textEndPos = res.lastIndexOf('%', textStartPos);
-            textStartPos = res.lastIndexOf('%', textEndPos - 1);
-            texts.push(res.substring(textStartPos, textEndPos));
-            i = textStartPos;
         }
         for (var k = 0; k < texts.length; k++) {
             var sigla = texts[k].match(/(%\w+)/g);

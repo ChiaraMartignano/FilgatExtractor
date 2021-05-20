@@ -1,5 +1,5 @@
 # FilgatExtractor
-This programme extracts the texts from a corpus stored in a docx document and stores the texts in different txt files. The names of the resulting files are derived from the siglum of the text in the docx document. If the siglum was not parsed properly, the txt file will be named "CHANGEME".
+This programme extracts the texts from a corpus stored in a txt file and stores the texts in different txt files. The names of the resulting files are derived from the siglum of the text in the main txt document. If the siglum was not parsed properly, the txt file will be named "CHANGEME".
 
 # Installation
 
