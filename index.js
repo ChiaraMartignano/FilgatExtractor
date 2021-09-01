@@ -21,7 +21,7 @@ var extractDoc = function(file) {
     })
 }
 
-fs.readdir('./input', {encoding: 'utf8', withFileTypes: true}, function(err, files) {
+fs.readdir('./input', {encoding: 'ascii', withFileTypes: true}, function(err, files) {
     if (err) { console.log(err); throw err }
     files.map(function(file) {
       console.log('Extracting texts from file: ' + file.name);
