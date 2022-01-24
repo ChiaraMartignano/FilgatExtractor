@@ -13,7 +13,7 @@ var extractDoc = function(file) {
             texts[k] = texts[k].replace(/(%\w+)/g, '%');
             if (sigla) {
                 console.log('Creating file: ' + sigla);
-                fs.writeFile('./output/' + sigla, xmlEntities.decode(texts[k]), function(err) {
+                fs.writeFile('./output/' + sigla, xmlEntities.decode(texts[k]), {encoding: 'ascii'}, function(err) {
                     if (err) { throw err }
                 }) 
             }
